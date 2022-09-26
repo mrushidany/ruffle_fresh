@@ -20,8 +20,8 @@ class UserSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         User::truncate();
         User::create([
-            'name'=>'NCBA',
-            'email'=>'admin@ncba.com',
+            'name'=>'SmartNology',
+            'email'=>'admin@smartnology.co.tz',
             'password'=>bcrypt('password')
         ]);
         Schema::enableForeignKeyConstraints();
