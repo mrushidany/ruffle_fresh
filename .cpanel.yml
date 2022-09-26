@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kwanzaco/raffle.kwanza.co.tz
+    - export DEPLOYPATH=/home/befoundvll/raffle.befound.live
     - /bin/cp -R * $DEPLOYPATH
