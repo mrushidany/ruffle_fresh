@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/smartnologyco/raffle.smartnology.co.tz
+    - export DEPLOYPATH=/home/kwanzaco/raffle.kwanza.co.tz
     - /bin/cp -R * $DEPLOYPATH
