@@ -54,8 +54,8 @@ class HomeController extends Controller
          $prize = $request->prize;
          $draw_category = $request->draw_category;
          $draw_name = $draw_category.'-'.$prize;
-	 $filename =  'NCBA | M-Pawa 2022: '.$draw_name.'-Draw.csv';
-	 $filename2 =  'NCBA_M-Pawa 2022_'.$draw_name.'-Draw.pdf';
+        $filename =  'RAFFLE_TOOL: '.$draw_name.'-Draw.csv';
+        $filename2 = 'RAFFLE_TOOL'.$draw_name.'-Draw.pdf';
 
 	$winners = DrawWinner::with(['category','draw','draw.drawType','participant'])->where('draw_id', '=', $draw)->orderBy('status', 'DESC')->get();
 	$no_of_winners = Category::where('id', '=', $draw)->first();
@@ -65,9 +65,9 @@ class HomeController extends Controller
 		<div style="width:100%; display:block;">
                 <table style="width:100%; margin:0 auto;">
                     <tr>
-                        <td colspan="3"><span style="bakground:red"><img src="http://167.172.141.179/images/ncba_mpawa_logo_coloured.png" height="140"></span></td>
+                        <td colspan="3"><span style="bakground:red"><img src="http://167.172.141.179/images/smartnology.png" height="140"></span></td>
                         <td colspan="7">
-                            <div>PROMO NAME: CHUZI LIMEKUBALI</div>
+                            <div>PROMO NAME: RAFFLE CAMPAIGN</div>
                             <div>DRAW TYPE: '.$draw_name.'</div>
                             <div>DRAW PRIZE: '.$prize.'</div>
                             <div>NUMBER OF WINNERS: '.$no_of_winners->no_of_winners.'</div>
@@ -115,7 +115,7 @@ class HomeController extends Controller
                             $html .= '<br><p>IN THE PRESENCE OF:</p>';
 			    $html .= '<p>GAMING BOARD REPRESENTATIVE<br>';
 			    $html .= 'NAME _____________________________ SIGN _______________ DATE _______________.</p>';
-                            $html .= '<p>NCBA BANK REPRESENTATIVE<br>';
+                            $html .= '<p>SMARTNOLOGY REPRESENTATIVE<br>';
                             $html .= 'NAME _____________________________ SIGN _______________ DATE _______________.</p>';
 
 
@@ -130,20 +130,17 @@ class HomeController extends Controller
 
         $file =  Excel::raw(new WinnersExport($draw, $prize, $draw_category), BaseExcel::CSV);
          // $file = '';
-	 $email = 'Solomon.Kawiche@ncbagroup.com';
-	 $name = 'Solomon Kawiche';
+	 $email = 'hawa@smartnology.co.tz';
+	 $name = 'Hawa Mwakatundu';
 	 //$email = 'david@smartcodes.co.tz'; 
 	 //$name = 'David Lyimo';
-         $subject = 'NCBA | M-Pawa (Chuzi Limekubali) - '.$prize.' Winners';
+         $subject = 'RAFFLE TOOL | - '.$prize.' Winners';
 
          Mail::send(['html'=>'emails.reports'], ['prize' => $prize, 'draw_category' => $draw_category, 'draw_name' => $draw_name], function($mail) use($email, $name, $subject, $file, $file2, $filename, $filename2){
-             $mail->from('info@ncba.co.tz', 'NCBA | M-Pawa Draw');
+             $mail->from('info@smartnology.co.tz', 'RAFFLE Draw');
              $mail->subject($subject);
              $mail->to($email, $name);
-	     $mail->cc('Maria.Mabella@ncbagroup.co.tz', 'Maria Mabella');
-	     $mail->cc('maduhu@smartcodes.co.tz', 'Maduhu John');
-	     $mail->cc('herman@smartcodes.co.tz', 'Herman Mkamba');
-	     $mail->bcc('david@smartnology.co.tz', 'David Charles');
+	     $mail->cc('daniel@smartnology.co.tz', 'Daniel Mrushi');
 	     $mail->attachData($file, $filename);
 	     $mail->attach($file2);
          });
