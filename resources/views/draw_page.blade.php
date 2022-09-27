@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center center-vertically">
-            <p class="big-title">M-PAWA DRAW</p>
+            <p class="big-title">RAFFLE TOOL DRAW</p>
             <div class="row">
                 <div class="col-md-12">
                     <animate-x-component/>

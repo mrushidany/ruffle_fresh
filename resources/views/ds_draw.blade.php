@@ -8,7 +8,7 @@
         <div class="sms">
             @if(@$msg)
                 {!!$msg!!}
-                <h2>Run the drow</h2>
+                <h2>Run the draw</h2>
             @else
             <form action="{{url('/upoload/file')}}" method="post" class="form" enctype="multipart/form-data"> 
                 @csrf
