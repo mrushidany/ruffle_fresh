@@ -129,18 +129,18 @@ input[type="color"]:focus,
   background: #FCFCFC !important;
 }
 
-.main-title{padding:10px; text-align:center; background:#EE2525; color:#fff; text-transform: uppercase;}
+.main-title{padding:10px; text-align:center; background: #0095D2; color:#fff; text-transform: uppercase;}
 .m-title{font-size:1.2rem; padding:7px; text-align:center; background:rgb(43, 136, 218); color:#fff;}
 .s-title{font-size:1rem; padding:7px; text-align:center;}
 .draw_nav{display:block; width:100%; gap: 0.4rem; background: #e6e6e6; padding:5px; text-align:center;}
 .draw_nav a{background:#eee; text-decoration:none; display: block; padding:10px 20px; margin-top:5px; font-size:1.1rem; color:#333; text-align:center;}
-.draw_nav a:hover{ background:#EE2525; text-decoration:none; color:red;}
-.draw_nav a:hover, .draw_nav a.dactive{ background:#EE2525; text-decoration:none; color:#fff;}
+.draw_nav a:hover{ background:#0095D2; text-decoration:none; color: #0095D2;}
+.draw_nav a:hover, .draw_nav a.dactive{ background: #0095D2; text-decoration:none; color:#fff;}
 
 .drw_nav{display:grid; width:100%; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; background: #adadad; padding:5px; text-align:center;}
 .drw_nav a{background:#eee; text-decoration:none; padding:10px 20px; font-size:1.3rem; color:#333; text-align:center;}
-.drw_nav a:hover{ background:#EE2525; text-decoration:none; color:red;}
-.drw_nav a:hover, .drw_nav a.dactive{ background:#950909; text-decoration:none; color:#fff;}
+.drw_nav a:hover{ background: #0095D2; text-decoration:none; color:#0095D2;}
+.drw_nav a:hover, .drw_nav a.dactive{ background:#0095D2; text-decoration:none; color:#fff;}
 
 .rw0{
     margin-right: -5px;
