@@ -61,11 +61,12 @@ class HomeController extends Controller
 	$no_of_winners = Category::where('id', '=', $draw)->first();
 
 	$html = '';
+    $image = asset('images/smartnology.png');
             $html = '
 		<div style="width:100%; display:block;">
                 <table style="width:100%; margin:0 auto;">
                     <tr>
-                        <td colspan="3"><span style="bakground:red"><img src="http://167.172.141.179/images/smartnology.png" height="140"></span></td>
+                        <td colspan="3"><span style="bakground:red"><img src="'.$image.'" height="140"></span></td>
                         <td colspan="7">
                             <div>PROMO NAME: RAFFLE CAMPAIGN</div>
                             <div>DRAW TYPE: '.$draw_name.'</div>
