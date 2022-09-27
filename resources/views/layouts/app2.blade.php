@@ -40,37 +40,36 @@
 <body style="background-size:cover; background-position:top;">
     <div id="apps">
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
-            <div class="container ">
-                <!-- Authentication Links -->
-                <div class="row">
-                    <div class="col-md-4 pr-5">
-                        <a href="{{url('draws')}}">
-                        <img src="{{asset('images/ncba_mpawa_logo_white.png')}}" class="img-responsive" style="height: 300px; object-fit:contain; margin-top: 1.5rem !important">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="{{asset('images/campaign_logos.png')}}" class="img-responsive bounce" style="height: 220px; object-fit:contain; margin-top: 4.5rem !important">
-                    </div>
+            <div class="container-fluid">
+              <a class="navbar-brand mx-5 pl-5" href="#" style="margin-right: 13rem !important">
+                <img src="{{asset('images/sag.svg')}}" class="img-responsive"  style="height: 5em">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: 14rem !important;">
+                  <li class="nav-item">
+                    <a class="nav-link pl-3" href="#">
+                        {{-- <img src="{{asset('images/lottery-jackpot.jpg')}}" class="img-responsive bounce" style="height: 100px; margin-top: 2.5rem !important; border-radius: 10px;"> --}}
+                    </a>
+                  </li>
+                </ul>
+                <span class="navbar-text">
                     @guest
-                    <div class="col-md-4">
-                        <img src="{{asset('images/vodacom-mpesa.png')}}" class="img-responsive" style="height: 120px; object-fit:contain; margin-top: 7.0rem !important">
-                    </div>
+                    <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 43px; object-fit:contain; margin-top: 2rem !important; margin-left: 14rem">
                     @else
-                    <div class="col-md-4">
-                        <img src="{{asset('images/vodacom-mpesa.png')}}" class="img-responsive" style="height: 120px; object-fit:contain; margin-top: 7.0rem !important" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                    <a class="dropdown-menu" aria-labelledby="dropdownMenuButton" href="{{ route('logout') }}" style="text-decoration: none;color:black;font-weight:bold;margin-top:-100px;margin-left:250px;"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <img src="{{asset('images/logout.png')}}"  style="height: 16px;object-fit:contain">
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                    <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 43px; object-fit:contain; margin-top: 2rem !important; margin-left: 14rem" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <a class="dropdown-menu" aria-labelledby="dropdownMenuButton" href="{{ route('logout') }}" style="text-decoration: none;color:black;font-weight:bold;margin-top:-16px;margin-left: 1115px;"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <img src="{{asset('images/logout.png')}}"  style="height: 16px;object-fit:contain">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     @endguest
-                </div>
+                </span>
+              </div>
             </div>
-        </nav>
+          </nav>
 
         <main class="main-bg">
             @yield('content')

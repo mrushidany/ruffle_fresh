@@ -1,7 +1,11 @@
 .navbar-custom{
-    background-color: #0095D2;
-    height: 156px;
+    background: url('../images/confetti.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    height: 130px;
 }
+
 .center-vertically{
     /* position: absolute;
     top: 50%;
