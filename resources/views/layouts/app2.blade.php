@@ -72,7 +72,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="main-bg">
             @yield('content')
         </main>
     </div>

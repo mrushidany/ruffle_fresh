@@ -2,8 +2,8 @@
 
 @section('content')
 <div style="height:100px;"></div>
-<div class="container">
-    <div class="well" style="padding:20px; background:#ddd;">
+<div class="container my-5 py-5" style="margin-top: 5em !important;">
+    <div class="well mt-3" style="padding:20px; background:#ddd;">
         <h2>Draws</h2>
         <div class="row">
             <div class="col-md-12">

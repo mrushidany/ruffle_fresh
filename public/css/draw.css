@@ -18,7 +18,9 @@
     background: url('../images/lottery-jackpot.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     border: none;
+    height: 100vh;
 }
 
 .big-title{
