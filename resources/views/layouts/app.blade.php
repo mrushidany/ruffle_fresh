@@ -71,19 +71,31 @@
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: 14rem !important;">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="{{asset('images/campaign_logos.png')}}" class="img-responsive bounce" style="height: 220px; object-fit:contain; margin-top: 2.5rem !important">
+                    <a class="nav-link pl-3" href="#">
+                        {{-- <img src="{{asset('images/lottery-jackpot.jpg')}}" class="img-responsive bounce" style="height: 100px; margin-top: 2.5rem !important; border-radius: 10px;"> --}}
                     </a>
                   </li>
                 </ul>
                 <span class="navbar-text">
+                    @guest
                     <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 43px; object-fit:contain; margin-top: 3rem !important">
+                    @else
+                    <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 43px; object-fit:contain; margin-top: 3rem !important" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <a class="dropdown-menu" aria-labelledby="dropdownMenuButton" href="{{ route('logout') }}" style="text-decoration: none;color:black;font-weight:bold;margin-top:-100px;margin-left:250px;"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <img src="{{asset('images/logout.png')}}"  style="height: 16px;object-fit:contain">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                    @endguest
                 </span>
               </div>
             </div>
           </nav>
 
-        <main>
+        <main class="main-bg">
             @yield('content')
         </main>
     </div>

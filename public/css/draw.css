@@ -14,6 +14,13 @@
     margin-bottom: auto; */
 }
 
+.main-bg {
+    background: url('../images/lottery-jackpot.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
 .big-title{
     font-size: 32px;
     color: black;
