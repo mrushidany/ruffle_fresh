@@ -33,23 +33,23 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
+        {{-- <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
             <div class="container ">
                 <!-- Authentication Links -->
-                <div class="row">
+                <div class="row" style="padding: 0 9rem !important;">
                     <div class="col-md-4 pr-5">
-                        <img src="{{asset('images/ncba_mpawa_logo_white.png')}}" class="img-responsive" style="height: 300px; object-fit:contain; margin-top: 1.5rem !important">
+                        <img src="{{asset('images/sag.svg')}}" class="img-responsive" style="height: 90px; object-fit:contain; margin-top: 5.5rem !important">
                     </div>
                     <div class="col-md-4">
                         <img src="{{asset('images/campaign_logos.png')}}" class="img-responsive bounce" style="height: 220px; object-fit:contain; margin-top: 2.5rem !important">
                     </div>
                     @guest
                     <div class="col-md-4">
-                        <img src="{{asset('images/vodacom-mpesa.png')}}" class="img-responsive" style="height: 120px; object-fit:contain; margin-top: 7.0rem !important">
+                        <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 40px; object-fit:contain; margin-top: 8rem !important">
                     </div>
                     @else
                     <div class="col-md-4">
-                        <img src="{{asset('images/vodacom-mpesa.png')}}" class="img-responsive" style="height: 120px; object-fit:contain; margin-top: 7.0rem !important" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 40px; object-fit:contain; margin-top: 8rem !important" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                     	<a class="dropdown-menu" aria-labelledby="dropdownMenuButton" href="{{ route('logout') }}" style="text-decoration: none;color:black;font-weight:bold;margin-top:-100px;margin-left:250px;"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <img src="{{asset('images/logout.png')}}"  style="height: 16px;object-fit:contain">
@@ -62,7 +62,26 @@
                     @endguest
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
+            <div class="container-fluid">
+              <a class="navbar-brand mx-5 pl-5" href="#" style="margin-right: 13rem !important">
+                <img src="{{asset('images/sag.svg')}}" class="img-responsive"  style="height: 5em">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: 14rem !important;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="{{asset('images/campaign_logos.png')}}" class="img-responsive bounce" style="height: 220px; object-fit:contain; margin-top: 2.5rem !important">
+                    </a>
+                  </li>
+                </ul>
+                <span class="navbar-text">
+                    <img src="{{asset('images/smartnology.png')}}" class="img-responsive" style="height: 43px; object-fit:contain; margin-top: 3rem !important">
+                </span>
+              </div>
+            </div>
+          </nav>
 
         <main>
             @yield('content')
