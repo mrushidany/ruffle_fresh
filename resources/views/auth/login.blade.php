@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6 mt-5">
-            <div class="card login-card">
+<div class="container py-5">
+    <div class="row justify-content-center py-5">
+        <div class="col-md-6 py-2">
+            <div class="card login-card" style="background: url('{{ asset('images/confetti.jpg')}}') repeat; background-position: center center; background-size: cover;">
 
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <p class="login-greeting offset-md-4">RAFFLE TOOL</p>
-                            <p class="login-description">Please login to your dashboard to continue</p>
+                            <p class="login-description white">Please login to your dashboard to continue</p>
                         </div>
                     </div>
                     <form method="POST" action="{{ route('login') }}">
@@ -48,7 +47,7 @@
 
                         <div class="form-group row mb-0 mt-4">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary btn-block py-3 cta-button">
+                                <button type="submit" class="btn btn-primary btn-block py-3 cta-button" style="background-color: #0D1D2B !important;">
                                     {{ __('Login') }}
                                 </button>
                             </div>

@@ -33,7 +33,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
+        {{-- <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
             <div class="container-fluid">
               <a class="navbar-brand mx-5 pl-5" href="#" style="margin-right: 13rem !important">
                 <img src="{{asset('images/sag.svg')}}" class="img-responsive"  style="height: 5em">
@@ -43,7 +43,7 @@
                   <li class="nav-item">
                     <a class="nav-link pl-3" href="#">
                         {{-- <img src="{{asset('images/lottery-jackpot.jpg')}}" class="img-responsive bounce" style="height: 100px; margin-top: 2.5rem !important; border-radius: 10px;"> --}}
-                    </a>
+                    {{-- </a>
                   </li>
                 </ul>
                 <span class="navbar-text">
@@ -63,7 +63,7 @@
                 </span>
               </div>
             </div>
-          </nav>
+        </nav> --}} 
 
         <main class="main-bg">
             @yield('content')
