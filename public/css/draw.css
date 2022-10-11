@@ -27,6 +27,11 @@
   
 }
 
+.main-bg-2 {
+    background: url('../images/confetti.jpg');
+    background-position: center;
+}
+
 .semi-dark {
     color: #0D1D2B !important;
     font-size: 24px !important;

@@ -37,9 +37,9 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body style="background-size:cover; background-position:top;">
+<body class="main-bg-2" style="background-size:cover; background-position:top;">
     <div id="apps">
-        <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
+        {{-- <nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-custom">
             <div class="container-fluid">
               <a class="navbar-brand mx-5 pl-5" href="#" style="margin-right: 13rem !important">
                 <img src="{{asset('images/sag.svg')}}" class="img-responsive"  style="height: 5em">
@@ -49,7 +49,7 @@
                   <li class="nav-item">
                     <a class="nav-link pl-3" href="#">
                         {{-- <img src="{{asset('images/lottery-jackpot.jpg')}}" class="img-responsive bounce" style="height: 100px; margin-top: 2.5rem !important; border-radius: 10px;"> --}}
-                    </a>
+                    {{-- </a>
                   </li>
                 </ul>
                 <span class="navbar-text">
@@ -69,9 +69,9 @@
                 </span>
               </div>
             </div>
-          </nav>
+        </nav> --}}
 
-        <main class="main-bg">
+        <main class="">
             @yield('content')
         </main>
     </div>
