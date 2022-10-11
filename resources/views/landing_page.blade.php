@@ -12,20 +12,26 @@
       <!-- font awesome cdn link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>RAFFLE | TOOL</title>
 </head>
 <body class="main-bg">
    <div class="home-bg">
         <section class="home">
-            <div class="block">
+            <div class="block" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="5000" data-aos-easing="ease-in-out">
                  <h3 class="">RAFFLE TOOL DEMO</h3>  
                  <p>To proceed to the Raffle Tool Demo, click the proceed button below</p> 
-                 <button>Proceed</button>
+                 <a class="button" href="{{ route('draws')}}">Proceed</a>
             </div>
             <div class="lottery-img">
                 <img src="{{ asset('images/jackpot-lottery.png')}}" style="width: 50em;" class="bounce" />
             </div>
         </section>
    </div>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
 </body>
 </html>
