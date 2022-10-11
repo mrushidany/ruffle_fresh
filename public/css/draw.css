@@ -27,6 +27,25 @@
   
 }
 
+.footer {
+    background-color: #e6e6e6;
+    margin: 2em;
+    padding: 2em 3em;
+    border-radius: 5px;
+    width: 8em;
+}
+
+.icon {
+    font-size: 36px;
+    color: green;
+}
+
+.icon:hover{
+    font-size: 40px;
+    color:#17A0D9;
+    cursor: pointer;
+}
+
 .main-bg-2 {
     background: url('../images/confetti.jpg');
     background-position: center;
