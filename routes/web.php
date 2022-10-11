@@ -23,8 +23,8 @@ use App\Http\Controllers\DrawController;
 */
 
 Route::get('/', function () {
-    return redirect('draws');
-})->name('welcome');
+    return view('landing_page');
+})->name('landing_page');
 
 Route::post('register',[AuthController::class,'register'])->name('user.register');
 
