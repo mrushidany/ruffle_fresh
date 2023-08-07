@@ -22,6 +22,7 @@
             @endif
         </div>
     </div>
+    <div class="row justify-content-center mt-5"><img class="transparent" src="{{ asset('images/blue-logo.svg') }}" /></div>
 </div>
 
 <script>
