@@ -28,7 +28,7 @@
           <img src="{{ asset('images/jackpot-lottery.png')}}" style="width: 50em;" class="bounce" />
         </div>
       </section>
-      <div class="smart_logo">kkkkkkk</div>
+      <div class="smart_logo"><img class="transparent" src="{{ asset('images/blue-logo.svg') }}" /></div>
    </div>
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script>
