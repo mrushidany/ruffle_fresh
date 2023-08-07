@@ -57,5 +57,6 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center"><img class="transparent" src="{{ asset('images/blue-logo.svg') }}" /></div>
 </div>
 @endsection
