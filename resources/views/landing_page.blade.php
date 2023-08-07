@@ -18,16 +18,17 @@
 </head>
 <body class="main-bg">
    <div class="home-bg">
-        <section class="home">
-            <div class="block" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="5000" data-aos-easing="ease-in-out">
-                 <h3 class="">RAFFLE TOOL DEMO</h3>  
-                 <p>To proceed to the Raffle Tool Demo, click the proceed button below</p> 
-                 <a class="button" href="{{ route('draws')}}">Proceed</a>
-            </div>
-            <div class="lottery-img">
-                <img src="{{ asset('images/jackpot-lottery.png')}}" style="width: 50em;" class="bounce" />
-            </div>
-        </section>
+      <section class="home">
+        <div class="block" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="5000" data-aos-easing="ease-in-out">
+          <h3 class="">RAFFLE TOOL DEMO</h3>  
+          <p>To proceed to the Raffle Tool Demo, click the proceed button below</p> 
+          <a class="button" href="{{ route('draws')}}">Proceed</a>
+        </div>
+        <div class="lottery-img">
+          <img src="{{ asset('images/jackpot-lottery.png')}}" style="width: 50em;" class="bounce" />
+        </div>
+      </section>
+      <div class="smart_logo">kkkkkkk</div>
    </div>
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script>
