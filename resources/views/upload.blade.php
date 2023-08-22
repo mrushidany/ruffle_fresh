@@ -83,8 +83,8 @@
                                         @foreach($draw_winners as $winner)
                                         <tr>
                                             <td>{{$i++}}</td>
-                                            <td>{{$winner->name}}</td>
                                             <td>{{$winner->phone_number}}</td>
+                                            <td>{{$winner->name}}</td>
                                             <td>{{$title}}</td>
 					    @if($draw_id == 5)
                                             <td>{{number_format($winner->amount)}}</td>
