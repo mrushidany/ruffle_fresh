@@ -20,6 +20,7 @@
                     <div class="col-md-12">
                         <div class="drw_nav">
                             @if($period != 'gp_draw')
+                            {{-- <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">Motorcycle</a> --}}
                             <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">First Draw</a>
                             {{-- <a href="{{url('draw/'.$period.'/cp_draw')}}"  class="<?php if($title === 'Cash Prize'){ echo "dactive"; }?>">Cash Prize</a> --}}
                             @endif
@@ -67,8 +68,8 @@
                                         <thead style="background-color: #1485c9; color: #fff;">
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
-                                            <th>Phone</th>
+                                            <th>Participant</th>
+                                            <th>Code</th>
                                             <th>Prize</th>
 					    @if($draw_id == 5)
                                             <th>Deposited Amount</th>
@@ -127,7 +128,8 @@
                         <form action="{{url('/upoload/file')}}" method="post" class="form" enctype="multipart/form-data"> 
                             @csrf
                             <p>
-                                <label>Upload {{$title}} CSV File</label>
+                                {{-- <label>Upload {{$title}} CSV File</label> --}}
+                                <label>Upload participants CSV File</label>
                                 <input type="file" name="file" value="" class="form-control" required>
                             </p>
                             <p><input type="hidden" name="drow_type_id" value="{{$draw_id}}" class="form-control"></p>
@@ -154,8 +156,8 @@
             <div style="text-align:center; padding:20px; min-height:200px;">
                 @if($winners)
                     @if($draw_id == 1 || $draw_id == 3)
-                    <h1>Motorcycle</h1>
-                    <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" />
+                    <h1>First Draw</h1>
+                    {{-- <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 2 || $draw_id == 4)
                     <h1>Cash Prize</h1>
                     <img src="{{asset('/images/weekly_cash.jpg')}}" style="height:160px;" />

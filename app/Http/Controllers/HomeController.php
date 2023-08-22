@@ -80,8 +80,8 @@ class HomeController extends Controller
                         <thead style="background-color:#555;">
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Phone</th>
+                                <th>Participant</th>
+                                <th>Code</th>
                                 <th>Prize</th>';
 				if($draw == 5){
                                  $html .= '<th>Deposited Amount</th>'.
@@ -153,7 +153,7 @@ class HomeController extends Controller
         if($period == 'weekly'){
             $main_title = '<h3>Weekly Draw!</h3>';
             if($type == 'mc_draw'){
-                $title = 'Motorcycle';
+                $title = 'First Draw Winner';
                 $draw_id = 1;
             }elseif($type == 'cp_draw'){
                 $title = 'Cash Prize';
