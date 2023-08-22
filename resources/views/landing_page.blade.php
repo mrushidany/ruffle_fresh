@@ -20,8 +20,8 @@
    <div class="home-bg">
       <section class="home">
         <div class="block" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="5000" data-aos-easing="ease-in-out">
-          <h3 class="">RAFFLE TOOL DEMO</h3>  
-          <p>To proceed to the Raffle Tool Demo, click the proceed button below</p> 
+          <h3 class="">RAFFLE TOOL</h3>  
+          <p>To proceed to the Raffle Tool, click the proceed button below</p> 
           <a class="button" href="{{ route('draws')}}">Proceed</a>
         </div>
         <div class="lottery-img">
