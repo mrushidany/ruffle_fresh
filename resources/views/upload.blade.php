@@ -157,7 +157,7 @@
                 @if($winners)
                     @if($draw_id == 1)
                     <h1>Prize One</h1>
-                    @if($draw_id == 3)
+                    @elseif($draw_id == 3)
                     <h1>Prize Two</h1>
                     {{-- <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 2 || $draw_id == 4)
