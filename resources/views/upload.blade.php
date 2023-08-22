@@ -20,8 +20,8 @@
                     <div class="col-md-12">
                         <div class="drw_nav">
                             @if($period != 'gp_draw')
-                            <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">Motorcycle</a>
-                            <a href="{{url('draw/'.$period.'/cp_draw')}}"  class="<?php if($title === 'Cash Prize'){ echo "dactive"; }?>">Cash Prize</a>
+                            <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">First Draw</a>
+                            {{-- <a href="{{url('draw/'.$period.'/cp_draw')}}"  class="<?php if($title === 'Cash Prize'){ echo "dactive"; }?>">Cash Prize</a> --}}
                             @endif
                             @if($period == 'monthly' && $period != 'gp_draw')
                                 <a href="{{url('draw/'.$period.'/ds_draw')}}" class="<?php if($title === 'Double Saving'){ echo "dactive"; }?>">Double Saving</a>
