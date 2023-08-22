@@ -40,18 +40,18 @@ class WinnersExport implements FromCollection, WithHeadings
 
 	//echo $this->draw_category; exit;
 
-        if($this->draw == 3){
-            $grand_participant = GrandWinner::where('status', 1)->select('participant_id')->latest()->first();
-            $grand_winner = Participant::where(['id' => $grand_participant->participant_id, 'has_participated_grand_prize' => false])->first();
-            $obj = (object)array();
-            $obj->id = 1;
-            $obj->name = $grand_winner->name;
-            $obj->phone = $grand_winner->phone_number;
-            $obj->category = 'Grand Prize';
-            $obj->draw = 'Grand Prize';
-            $trimmed->push($obj);
-            return $trimmed;
-        }
+        // if($this->draw == 3){
+        //     $grand_participant = GrandWinner::where('status', 1)->select('participant_id')->latest()->first();
+        //     $grand_winner = Participant::where(['id' => $grand_participant->participant_id, 'has_participated_grand_prize' => false])->first();
+        //     $obj = (object)array();
+        //     $obj->id = 1;
+        //     $obj->name = $grand_winner->name;
+        //     $obj->phone = $grand_winner->phone_number;
+        //     $obj->category = 'Grand Prize';
+        //     $obj->draw = 'Grand Prize';
+        //     $trimmed->push($obj);
+        //     return $trimmed;
+        // }
 
         $winners = DrawWinner::with(['category','draw','draw.drawType'])->where('draw_id',$this->draw)->get();
 
