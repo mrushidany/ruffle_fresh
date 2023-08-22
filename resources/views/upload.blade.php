@@ -155,8 +155,10 @@
         <div class="modal-body">
             <div style="text-align:center; padding:20px; min-height:200px;">
                 @if($winners)
-                    @if($draw_id == 1 || $draw_id == 3)
+                    @if($draw_id == 1)
                     <h1>Prize One</h1>
+                    @if($draw_id == 3)
+                    <h1>Prize Two</h1>
                     {{-- <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 2 || $draw_id == 4)
                     <h1>Cash Prize</h1>
