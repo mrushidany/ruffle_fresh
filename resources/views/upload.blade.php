@@ -21,11 +21,11 @@
                         <div class="drw_nav">
                             @if($period != 'gp_draw')
                             {{-- <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">Motorcycle</a> --}}
-                            <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">First Draw</a>
+                            <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">{{ $title }}</a>
                             {{-- <a href="{{url('draw/'.$period.'/cp_draw')}}"  class="<?php if($title === 'Cash Prize'){ echo "dactive"; }?>">Cash Prize</a> --}}
                             @endif
                             @if($period == 'monthly' && $period != 'gp_draw')
-                                <a href="{{url('draw/'.$period.'/ds_draw')}}" class="<?php if($title === 'Double Saving'){ echo "dactive"; }?>">Double Saving</a>
+                                {{-- <a href="{{url('draw/'.$period.'/ds_draw')}}" class="<?php if($title === 'Double Saving'){ echo "dactive"; }?>">Double Saving</a> --}}
                             @endif
                             @if($period == 'gp_draw')
                                 <a href="{{url('draw/'.$period.'/grand_prize')}}" class="<?php if($title === 'Grand Prize'){ echo "dactive"; }?>">Grand Prize</a>
@@ -156,7 +156,7 @@
             <div style="text-align:center; padding:20px; min-height:200px;">
                 @if($winners)
                     @if($draw_id == 1 || $draw_id == 3)
-                    <h1>First Draw</h1>
+                    <h1>Prize One</h1>
                     {{-- <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 2 || $draw_id == 4)
                     <h1>Cash Prize</h1>
