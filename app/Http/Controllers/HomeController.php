@@ -115,7 +115,7 @@ class HomeController extends Controller
                             $html .= '<br><p>IN THE PRESENCE OF:</p>';
 			    $html .= '<p>GAMING BOARD REPRESENTATIVE<br>';
 			    $html .= 'NAME _____________________________ SIGN _______________ DATE _______________.</p>';
-                            $html .= '<p>SMARTNOLOGY REPRESENTATIVE<br>';
+                            $html .= '<p>STANDARD CHARTERED REPRESENTATIVE<br>';
                             $html .= 'NAME _____________________________ SIGN _______________ DATE _______________.</p>';
 
 
@@ -130,8 +130,8 @@ class HomeController extends Controller
 
         $file =  Excel::raw(new WinnersExport($draw, $prize, $draw_category), BaseExcel::CSV);
          // $file = '';
-	 $email = 'daniel@smartnology.co.tz';
-	 $name = 'Daniel Mrushi';
+	 $email = 'Haikaeli.Mnzava@sc.com';
+	 $name = 'Haikaeli Mnzava';
 	 //$email = 'david@smartcodes.co.tz'; 
 	 //$name = 'David Lyimo';
          $subject = 'RAFFLE TOOL | - '.$prize.' Winners';
@@ -140,7 +140,7 @@ class HomeController extends Controller
              $mail->from('info@smartnology.co.tz', 'RAFFLE Draw');
              $mail->subject($subject);
              $mail->to($email, $name);
-	     $mail->cc('daniel@smartnology.co.tz', 'Daniel Mrushi');
+	     $mail->cc(['daniel@smartnology.co.tz', 'hawa@smartnology.co.tz']);
 	     $mail->attachData($file, $filename);
 	     $mail->attach($file2);
          });
