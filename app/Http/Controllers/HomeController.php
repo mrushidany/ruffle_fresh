@@ -71,7 +71,7 @@ class HomeController extends Controller
                             <div>DRAW TYPE: '.$draw_name.'</div>
                             <div>DRAW PRIZE: '.$prize.'</div>
                             <div>NUMBER OF WINNERS: '.$no_of_winners->no_of_winners.'</div>
-                            <div>BY: info@smartcodes.co.tz</div>
+                            <div>BY: info@smartnology.co.tz</div>
                         </td>
                     </tr>
                 </table>';
