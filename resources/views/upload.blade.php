@@ -158,11 +158,11 @@
                     @if($draw_id == 1)
                     <h1>Prize One</h1>
                     @elseif($draw_id == 3)
-                    <h1>Prize Two</h1>
+                    <h1>Bi Monthly</h1>
                     {{-- <img src="{{asset('/images/motorcycle.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 2 || $draw_id == 4)
-                    <h1>Cash Prize</h1>
-                    <img src="{{asset('/images/weekly_cash.jpg')}}" style="height:160px;" />
+                    <h1>Monthly</h1>
+                    {{-- <img src="{{asset('/images/weekly_cash.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 5)
                     <h1>Double Saving</h1>
                     <img src="{{asset('/images/double_savings.jpg')}}" style="height:160px;" />
