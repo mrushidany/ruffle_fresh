@@ -24,7 +24,6 @@ class ParticipantsImport implements ToModel
             'draw_id'=>$this->draw,
             'name'=>$row[0],
             'phone_number'=>$row[1],
-	    'amount'=> $row[2],
           ]);
 	}else{
 	   return new Participant([

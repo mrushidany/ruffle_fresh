@@ -173,7 +173,7 @@ class HomeController extends Controller
                 $title = 'Monthly';
                 $draw_id = 4;
             }elseif($type == 'ds_draw'){
-                $title = 'Double Saving';
+                $title = 'Bi Monthly';
                 $draw_id = 5;
             }
             

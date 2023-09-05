@@ -21,7 +21,7 @@
                         <div class="drw_nav">
                             @if($period == 'monthly')
                             {{-- <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Motorcycle'){ echo "dactive"; }?>">Motorcycle</a> --}}
-                            <a href="{{url('draw/'.$period.'/mc_draw')}}" class="<?php if($title === 'Bi Monthly'){ echo "dactive"; }?>">Bi Monthly</a>
+                            <a href="{{url('draw/'.$period.'/ds_draw')}}" class="<?php if($title === 'Bi Monthly'){ echo "dactive"; }?>">Bi Monthlyy</a>
                             <a href="{{url('draw/'.$period.'/cp_draw')}}"  class="<?php if($title === 'Monthly'){ echo "dactive"; }?>">Monthly</a>
                             @endif
                             @if($period == 'monthly' && $period != 'gp_draw')
@@ -164,8 +164,8 @@
                     <h1>Monthly</h1>
                     {{-- <img src="{{asset('/images/weekly_cash.jpg')}}" style="height:160px;" /> --}}
                     @elseif($draw_id == 5)
-                    <h1>Double Saving</h1>
-                    <img src="{{asset('/images/double_savings.jpg')}}" style="height:160px;" />
+                    <h1>Bi Monthly</h1>
+                    {{-- <img src="{{asset('/images/double_savings.jpg')}}" style="height:160px;" /> --}}
                     @else
                     <h1>Grand Prize</h1>
                     <img src="{{asset('/images/grand_prize.jpg')}}" style="height:160px;" />
