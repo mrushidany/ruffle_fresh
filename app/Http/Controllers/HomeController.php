@@ -130,17 +130,17 @@ class HomeController extends Controller
 
         $file =  Excel::raw(new WinnersExport($draw, $prize, $draw_category), BaseExcel::CSV);
          // $file = '';
-	//  $email = 'Haikaeli.Mnzava@sc.com';
-	//  $name = 'Haikaeli Mnzava';
-	 $email = 'mrushidany@gmail.com'; 
-	 $name = 'Daniel Mrushi';
+	 $email = 'Haikaeli.Mnzava@sc.com';
+	 $name = 'Haikaeli Mnzava';
+	 //$email = 'david@smartcodes.co.tz'; 
+	 //$name = 'David Lyimo';
          $subject = 'RAFFLE TOOL | - '.$prize.' Winners';
 
          Mail::send(['html'=>'emails.reports'], ['prize' => $prize, 'draw_category' => $draw_category, 'draw_name' => $draw_name], function($mail) use($email, $name, $subject, $file, $file2, $filename, $filename2){
              $mail->from('info@smartnology.co.tz', 'RAFFLE Draw');
              $mail->subject($subject);
              $mail->to($email, $name);
-	     $mail->cc(['daniel@smartnology.co.tz']);
+	     $mail->cc(['daniel@smartnology.co.tz', 'hawa@smartnology.co.tz']);
 	     $mail->attachData($file, $filename);
 	     $mail->attach($file2);
          });
