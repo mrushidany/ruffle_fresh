@@ -153,7 +153,7 @@ class HomeController extends Controller
         if($period == 'weekly'){
             $main_title = '<h3>Weekly Draw!</h3>';
             if($type == 'mc_draw'){
-                $title = 'Prize One';
+                $title = 'Bi Weekly';
                 $draw_id = 1;
             }elseif($type == 'cp_draw'){
                 $title = 'Cash Prize';
@@ -165,12 +165,12 @@ class HomeController extends Controller
             }else{ $msg = null; }
 
         }elseif($period == 'monthly')  {
-            $main_title = '<h3>Montly Draw!</h3>';
+            $main_title = '<h3>Montly Draws!</h3>';
             if($type == 'mc_draw'){
-                $title = 'Prize Two';
+                $title = 'Bi Monthly';
                 $draw_id = 3;
             }elseif($type == 'cp_draw'){
-                $title = 'Cash Prize';
+                $title = 'Monthly';
                 $draw_id = 4;
             }elseif($type == 'ds_draw'){
                 $title = 'Double Saving';
