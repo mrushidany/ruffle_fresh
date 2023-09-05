@@ -83,10 +83,10 @@ class HomeController extends Controller
                                 <th>Participant</th>
                                 <th>Code</th>
                                 <th>Prize</th>';
-				if($draw == 5){
-                                 $html .= '<th>Deposited Amount</th>'.
-                                  '<th>Amount Rewarded</th>';
-                                }
+				// if($draw == 5){
+                //                  $html .= '<th>Deposited Amount</th>'.
+                //                   '<th>Amount Rewarded</th>';
+                //                 }
                               	$html .= '<th>Status</th>
                             </tr>
                             </thead>
@@ -98,10 +98,10 @@ class HomeController extends Controller
                                 '<td>'.$winner->name.'</td>'.
                                 '<td>'.$winner->phone_number.'</td>'.
                                 '<td>'.$prize.'</td>';
-				if($draw == 5){
-                                   $html .= '<td>'.number_format($winner->amount).'</td>'.
-                                    '<td>'.number_format($winner->double_amount).'</td>';
-                                }
+				// if($draw == 5){
+                //                    $html .= '<td>'.number_format($winner->amount).'</td>'.
+                //                     '<td>'.number_format($winner->double_amount).'</td>';
+                //                 }
                                $html .=  '<td>';
                                     if($winner->status == 1){
                                         $html .= 'Qualified';
