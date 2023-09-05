@@ -108,14 +108,14 @@ class DrawController extends Controller
                     $draw->category_id = $draw_id;
                     $draw->name = $participant->name;
                     $draw->phone_number= $participant->phone_number;
-		    if($draw_id == 5){
-                        $draw->amount = $participant->amount;
-                        if($participant->amount >= 200000){
-                            $draw->double_amount = 200000;
-                        }else{
-                            $draw->double_amount = $participant->amount;
-                        }
-                    }
+		            // if($draw_id == 5){
+                    //     $draw->amount = $participant->amount;
+                    //     if($participant->amount >= 200000){
+                    //         $draw->double_amount = 200000;
+                    //     }else{
+                    //         $draw->double_amount = $participant->amount;
+                    //     }
+                    // }
                     $draw->status = 1;
                     $draw->save();
                 }

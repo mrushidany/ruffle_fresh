@@ -71,10 +71,6 @@
                                             <th>Participant</th>
                                             <th>Code</th>
                                             <th>Prize</th>
-					    @if($draw_id == 5)
-                                            <th>Deposited Amount</th>
-                                            <th>Amount Rewarded</th>
-                                            @endif
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -86,10 +82,6 @@
                                             <td>{{$winner->phone_number}}</td>
                                             <td>{{$winner->name}}</td>
                                             <td>{{$title}}</td>
-					    @if($draw_id == 5)
-                                            <td>{{number_format($winner->amount)}}</td>
-                                            <td>{{number_format($winner->double_amount)}}</td>
-                                            @endif
                                             <td><a href="{{url('disqualify_winner/'.$winner->id)}}" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Disqualify</a></td>
                                         </tr>
                                         @endforeach
