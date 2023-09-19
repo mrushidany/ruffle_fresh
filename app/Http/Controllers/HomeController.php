@@ -140,7 +140,7 @@ class HomeController extends Controller
              $mail->from('info@smartnology.co.tz', 'RAFFLE Draw');
              $mail->subject($subject);
              $mail->to($email, $name);
-	     $mail->cc(['daniel@smartnology.co.tz', 'hawa@smartnology.co.tz']);
+	     $mail->cc(['daniel@smartnology.co.tz', 'hawa@smartnology.co.tz', 'Patricia.Nantumbwe@sc.com']);
 	     $mail->attachData($file, $filename);
 	     $mail->attach($file2);
          });
